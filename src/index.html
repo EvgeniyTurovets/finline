@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/selectric.min.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/bootstrap.min.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/main.css'>
+</head>
+
+<body>
+
+<div class="content">
+    <div class="container">
+        <div class="title">
+            <h1>Деньги под залог ПТС</h1>
+            <span>Пользуйтесь машиной, как и раньше</span>
+        </div>
+
+        <div class="steps">
+            <div class="step active">
+                <div class="step__left">1</div>
+                <div class="step__right">
+                    <div>Сумма и срок</div>
+                    <span>Укажите желаемую сумму и срок займа </span>
+                </div>
+            </div>
+
+            <div class="step complied">
+                <div class="step__left">2</div>
+                <div class="step__right">
+                    <div>Личные данные</div>
+                    <span>Укажите Ваши личные данные </span>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step__left">3</div>
+                <div class="step__right">
+                    <div>Документы</div>
+                    <span>Прекрипите необходимые документы </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="step1">
+            <div class="row">
+                <div class="col-lg-8">
+                    <form class="step1__left" id="zaymform">
+                        <div class="range">
+                            <div class="range__top">
+                                <div class="range__top__left">Сумма займа</div>
+                                <div class="range__top__right">250 000 руб.</div>
+                            </div>
+                            <div class="range__wrap">
+                                <input type="range" name="" min="50000" max="1000000" value="10" step="1000">
+                                <div class="range__diapason">
+                                    <span>50 000 руб.</span>
+                                    <span>1 000 000 руб.</span>
+                                </div>
+                            </div>
+                            
+                            <div class="srok">
+                                <span>Срок займа</span>
+                                <div class="srok__wrap">
+                                    
+                                    <input type="radio" id="male" name="gender" value="male" checked>
+                                    <label for="male">24 месяца</label><br>
+                                    <input type="radio" id="female" name="gender" value="female">
+                                    <label for="female">36 месяцев</label><br>
+                                    <input type="radio" id="other" name="gender" value="other">
+                                    <label for="other">48 месяцев</label>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step__left__bot">
+                            <div class="step__left__wraper">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="input">
+                                            <label>Телефон</label>
+                                            <input type="phone" name="" value="+7">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                         <div class="input">
+                                            <label>Город</label>
+                                            <select>
+                                                <option>Москва</option>
+                                                <option>Город</option>
+                                                <option>Город</option>
+                                                <option>Город</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+
+                               
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-4">
+                     <div class="step1__right"></div>
+                </div>
+            </div>
+            
+           
+        </div>
+    </div>
+
+
+    
+</div>
+
+<script src="./js/jquery-3.2.1.min.js"></script>
+<script src="./js/maskedinput.min.js"></script>
+<script src="./js/selectric.min.js"></script>
+
+<script src="./js/main.js"></script>
+</body>
+
+</html>
+
+
+
+
