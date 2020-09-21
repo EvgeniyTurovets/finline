@@ -1,7 +1,11 @@
 $(function(){
 	$('input[type="phone"]').mask("+7(999) 999-9999"); 
 
-	$('select').selectric(); 
+	$('select').selectric({
+		onChange: function() {
+		    $(this).closest('.input').addClass('active')
+		  },
+	}); 
 
 	
 	var slider = document.getElementById("myRange");
@@ -23,4 +27,12 @@ $(function(){
 	// открываем или скрываем блок под заголовком, по которому кликнули
 	    $(this).next().slideToggle(500);
 	}
+
+
+	$('#zaymform').submit(function(){
+		event.preventDefault()
+		$('.step1').hide()
+		$('.step1-5').fadeIn(500)
+		return false
+	})
 })
