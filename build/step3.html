@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel='stylesheet' type='text/css' media='screen' href='./css/selectric.min.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='./css/bootstrap.min.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/range.min.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='./css/main.css'>
 </head>
 
@@ -30,7 +31,7 @@
                 </div>
             </div>
 
-            <div class="step active">
+            <div class="step complied">
                 <div class="step__left">2</div>
                 <div class="step__right">
                     <div>Личные данные</div>
@@ -38,7 +39,7 @@
                 </div>
             </div>
 
-            <div class="step">
+            <div class="step active">
                 <div class="step__left">3</div>
                 <div class="step__right">
                     <div>Документы</div>
@@ -47,185 +48,109 @@
             </div>
         </div>
 
-        <div class="step2">
-            
+        <div class="step3">
+            <h2>Документы</h2>  
+            <form class="step3__form" id="step3-form">
+                <div class="step3__form__top">
+                    <div class="row">
 
-                <div class="row">
-                    <div class="col-12"><h2>Информация об авто</h2></div>
-                    <div class="col-md-4">
-                        <div class="input">
-                            <label>Марка авто</label>
-                            <select>
-                                <option disabled selected>Выберите марку</option>
-                                <option>Марка1</option>
-                                <option>Марка2</option>
-                                <option>Марка3</option>
-                                <option>Марка1</option>
-                                <option>Марка2</option>
-                                <option>Марка3</option>
-                                <option>Марка1</option>
-                                <option>Марка2</option>
-                                <option>Марка3</option>
-                                <option>Марка1</option>
-                                <option>Марка2</option>
-                                <option>Марка3</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="input">
-                            <label>Модель</label>
-                            <select>
-                                <option disabled selected>Выберите модель</option>
-                                <option>Марка1</option>
-                                <option>Марка2</option>
-                                <option>Марка3</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="input">
-                            <label>Год выпуска </label>
-                            <select>
-                                <option>2010</option>
-                                <option>Марка1</option>
-                                <option>Марка2</option>
-                                <option>Марка3</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="input">
-                            <label>VIN-номер</label>
-                            <input type="" name="" value="" placeholder="VN281289484721827474">
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="input">
-                            <label>Стоимость авто</label>
-                            <input type="" name="" value="" placeholder="350 000 руб.">
-                        </div>
-                    </div>
-                    
-                </div>
-            
-
-                <div class="row">
-                    <div class="col-12"><h2>Личные данные</h2></div>
-                    <div class="col-md-4">
-                        <div class="input">
-                            <label>ФИО</label>
-                            <input type="" name="" value="" placeholder="Иванов Петр Сергеевич">
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="input">
-                            <label>Дата рождения</label>
-                            <input type="" name="" value="" placeholder="01.01.1990">
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="input">
-                            <label>Серия и номер паспорта</label>
-                            <input type="" name="" value="" placeholder="12 23 456789">
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="input">
-                            <label>Место рождения</label>
-                            <input type="" name="" value="" placeholder="Москва">
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="input">
-                            <label>Кем выдан паспорт</label>
-                            <input type="" name="" value="" placeholder="УФМС России">
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="input">
-                            <label>ФИО</label>
-                            <input type="" name="" value="" placeholder="Иванов Петр Сергеевич">
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="input">
-                            <label>Дата рождения</label>
-                            <input type="" name="" value="" placeholder="01.01.1990">
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="input">
-                            <label>Серия и номер паспорта</label>
-                            <input type="" name="" value="" placeholder="12 23 456789">
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="input">
-                            <label>SMS-код</label>
-                            <input type="" name="" value="" placeholder="123 456">
-                        </div>
-                        <div class="check">
-                            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                            <label for="vehicle1"></label>
-                            <div>
-                                Совпадает с местом регистрации
+                        <div class="col-xl-2 col-lg-3 col-md-4 col-6">
+                            <div class="fileitem">
+                                <div class="fileUpload">
+                                    <input type="file" class="upload" />
+                                    <span></span>
+                                </div>
+                                <div>Фото паспорта<br> разворот 1</div>
+                                <a href="">Удалить</a>
                             </div>
-                        </div> 
+                        </div>
+
+                        <div class="col-xl-2 col-lg-3 col-md-4 col-6">
+                            <div class="fileitem">
+                                <div class="fileUpload">
+                                    <input type="file" class="upload" />
+                                    <span></span>
+                                </div>
+                                <div>Фото паспорта<br> разворот 2</div>
+                                <a href="">Удалить</a>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-2 col-lg-3 col-md-4 col-6">
+                            <div class="fileitem upload">
+                                <div class="fileUpload" style="background-image: url('./img/doc.jpg');">
+                                    <input type="file" class="upload" />
+                                    <span></span>
+                                </div>
+                                <div>Фото СТС 1<br> сторона</div>
+                                <a href="">Удалить</a>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-2 col-lg-3 col-md-4 col-6">
+                            <div class="fileitem">
+                                <div class="fileUpload">
+                                    <input type="file" class="upload" />
+                                    <span></span>
+                                </div>
+                                <div>Фото СТС 2<br> сторона</div>
+                                <a href="">Удалить</a>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-2 col-lg-3 col-md-4 col-6">
+                            <div class="fileitem">
+                                <div class="fileUpload">
+                                    <input type="file" class="upload" />
+                                    <span></span>
+                                </div>
+                                <div>Фото ПТС 1<br> сторона</div>
+                                <a href="">Удалить</a>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-2 col-lg-3 col-md-4 col-6">
+                            <div class="fileitem">
+                                <div class="fileUpload">
+                                    <input type="file" class="upload" />
+                                    <span></span>
+                                </div>
+                                <div>Фото ПТС 2<br> сторона</div>
+                                <a href="">Удалить</a>
+                            </div>
+                        </div>
                     </div>
-                    
                 </div>
-            
+               
 
-                <div class="row">
-                    <div class="col-12"><h2>Информация о работе</h2></div>
-                    <div class="col-md-4">
-                        <div class="input">
-                            <label>SMS-код</label>
-                            <input type="" name="" value="" placeholder="123 456">
-                        </div>
+                <div class="step3__bot row">
+                    <div class="col-md-8">
+                        <p>Мы бережно относимся к Вашим персональным данным. Оставляя заявку на этом сайте, Вы можете быть полностью уверены, что Ваши персональные данные не попадут в руки злоумышленников.</p>
                     </div>
-                    <div class="col-md-4">
-                        <div class="input">
-                            <label>SMS-код</label>
-                            <input type="" name="" value="" placeholder="123 456">
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="input">
-                            <label>SMS-код</label>
-                            <input type="" name="" value="" placeholder="123 456">
-                        </div>
-                    </div>
-
                     <div class="col-md-4">
                         <div class="submit">
-                            <input type="submit" name="" value="Далее">
-                            
+                            <input type="submit" name="submit3" value="Получить одобрение">
                         </div>
                     </div>
-                    
-                    
                 </div>
-
-                
-            </div>
+            </form>
         </div>
     </div>
-
-
-    
 </div>
 
+</div>
+<div class="modal" id="step3modal">
+    <div class="modal-wrap">
+        <div class="modal-v"></div>
+        <div class="modal-top">Ваша заявка принята</div>
+        <span>Наш менеджер свяжется с Вами в ближайшее время. </span>
+        <div class="modal-btn">Закрыть</div>
+    </div>
+</div>
 <script src="./js/jquery-3.2.1.min.js"></script>
 <script src="./js/maskedinput.min.js"></script>
 <script src="./js/selectric.min.js"></script>
-
+<script src="./js/range.min.js"></script>
 <script src="./js/main.js"></script>
 </body>
 

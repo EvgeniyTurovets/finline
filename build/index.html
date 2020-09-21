@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel='stylesheet' type='text/css' media='screen' href='./css/selectric.min.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='./css/bootstrap.min.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/range.min.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='./css/main.css'>
 </head>
 
@@ -58,7 +59,7 @@
                             </div>
                             <div class="range__wrap">
                                 <div class="slidecontainer">
-                                  <input type="range" min= "50000" max= "1000000" value= "250000" step="1000" class="slider" id="myRange">
+                                  <input type="range" data-min="50000" data-max="1000000" data-from="250000" min= "50000" max= "1000000" value= "250000" step="1000" class="slider" id="myRange">
                                 </div>
                                 <div class="range__diapason">
                                     <span>50 000 руб.</span>
@@ -192,6 +193,7 @@
 <script src="./js/jquery-3.2.1.min.js"></script>
 <script src="./js/maskedinput.min.js"></script>
 <script src="./js/selectric.min.js"></script>
+<script src="./js/range.min.js"></script>
 
 <script src="./js/main.js"></script>
 </body>

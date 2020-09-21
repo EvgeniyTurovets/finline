@@ -7,15 +7,19 @@ $(function(){
 		  },
 	}); 
 
-	
-	var slider = document.getElementById("myRange");
-	var output = document.getElementById("outpup");
-	output.innerHTML = slider.value; // Display the default slider value
+	$("input[type='range']").ionRangeSlider();
 
-	// Update the current slider value (each time you drag the slider handle)
-	slider.oninput = function() {
-	output.innerHTML = this.value;
+	if($('#myRange').length){
+		var slider = document.getElementById("myRange");
+		var output = document.getElementById("outpup");
+		output.innerHTML = slider.value; // Display the default slider value
+
+		// Update the current slider value (each time you drag the slider handle)
+		slider.oninput = function() {
+		output.innerHTML = this.value;
+		}
 	}
+	
 
 	$('#accordeon .acc-head').on('click', f_acc);
 
@@ -35,4 +39,23 @@ $(function(){
 		$('.step1-5').fadeIn(500)
 		return false
 	})
+
+	$('#step3-form').submit(function(){
+		event.preventDefault()
+		$('#step3modal').fadeIn()
+		return false
+	})
+
+	$('.modal-btn').click(function(){
+		$('#step3modal').fadeOut()
+	})
+
+	$('.modal').mouseup(function (e){ // событие клика по веб-документу
+		var div = $(".modal-wrap"); // тут указываем ID элемента
+		if (!div.is(e.target) // если клик был не по нашему блоку
+		    && div.has(e.target).length === 0) { // и не по его дочерним элементам
+			$('#step3modal').fadeOut()
+		}
+	});
+	
 })
