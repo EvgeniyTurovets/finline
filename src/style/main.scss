@@ -5,6 +5,9 @@ $grey: #4B4D4E;
     margin: 0;
     box-sizing: border-box;
 }
+input:focus{
+    outline: none;
+}
 
 .wrap{
     width: 100%;
@@ -178,6 +181,7 @@ h1{
 .range__top{
    display: flex;
    justify-content: space-between;
+   align-items: center;
 }
 
 .range__top__left{
@@ -257,7 +261,7 @@ h1{
     bottom: -10px;
     margin-left: 10px;
     padding: 0 5px;
-    z-index: 1;
+    z-index: 2;
 }
 
 .input input{
@@ -321,7 +325,7 @@ h1{
     border: 1px solid #000;
 }
 .selectric-open{
-    z-index: 0;
+    z-index: 1;
 }
 .selectric-open.selectric-above{
     z-index: 2;
@@ -338,9 +342,233 @@ h1{
 .selectric-items li.highlighted{
     background-color: #dcdcdc;
 }
+.selectric-items li{
+    background-color: #fff;
+}
 .selectric-items li:hover{
     background-color: #dcdcdc;
 }
 .selectric-items li, .selectric-items ul{
     font-size: 16px;
+}
+.selectric-items{
+    z-index: 1;
+}
+.step__left__wraper .row{
+    margin-bottom: 32px;
+    align-items: center;
+}
+.check{
+    display: flex;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    color: #4B4D4E;
+    align-items: center;
+}
+.check div a{
+    display: block;
+    color: #1BA2E3;
+    text-decoration: none;
+    transition: 0.3s all;
+}
+.check div a:hover{
+    color: #1881b3;
+}
+.check input{
+    display: none;
+}
+.check input + label{
+    width: 24px;
+    height: 24px;
+    display: block;
+    border: 1px solid #E0E0DE;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-right: 14px;
+    cursor: pointer;
+}
+
+.check input:checked + label:after{
+    content: "";
+    display: block;
+    width: 7px;
+    height: 10px;
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+    transform: rotate(45deg);
+    margin-bottom: 2px;
+}
+
+.submit input{
+    width: 100%;
+    background: #1BA2E3;
+    border-radius: 5px;
+    border: 0;
+    height: 48px;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+.submit input:hover{
+    opacity: 0.9;
+}
+.submit span{
+    font-size: 11px;
+    line-height: 13px;
+    text-align: center;
+    color: #4B4D4E;
+    text-align: center;
+    display: block;
+    margin-top: 5px;
+}
+
+
+.slidecontainer {
+    width: 100%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 4px; /* Specified height * /
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+    background-color: #0980BA;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #fff; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+    border: 6px solid #1BA2E3;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 100%;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #fff; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+    border: 6px solid #1BA2E3;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 100%;
+}
+
+
+
+#accordeon {
+    width: 100%;
+}
+ 
+.acc-head {
+    padding: 25px 25px;
+    background: #032E49;
+    cursor: pointer;
+    height: 64px;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 12px;
+    position: relative;
+}
+.acc-head:first-child{
+    margin-top: 0;
+}
+.acc-body {
+    padding: 25px 25px;
+    border-bottom: 1px solid #c0c0c0;
+    margin-bottom: 5px;
+    display: none;
+    background: #032E49;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 17px;
+    margin-top: -25px;
+}
+.acc-body ol{
+    padding-left: 15px;
+}
+.acc-body div{
+    margin-bottom: 5px;
+}
+
+
+.acc-head:after{
+    content: "";
+    display: block;
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    width: 12px;
+    height: 12px;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: rotate(45deg);
+    transition: 0.3s;
+}
+.acc-head.active:after{
+    transform: rotate(-135deg);
+    top: 30px;
+}
+
+.content{
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+@media(max-width: 767px){
+    .srok{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .srok span{
+        margin-bottom: 15px;
+    }
+    .srok__wrap label{
+        margin-left: 0;
+        margin-right: 20px;
+    }
+
+    .check{
+        margin-bottom: 25px;
+    }
+    .step1__left{
+        margin-bottom: 50px;
+    }
+}
+
+@media(max-width: 559px){
+    .range{
+        padding: 15px;
+    }
+}
+
+
+@media(max-width: 424px){
+    .srok__wrap label{
+        font-size: 14px;
+        margin-right: 15px;
+    }
 }

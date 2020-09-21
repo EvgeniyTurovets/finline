@@ -30,7 +30,7 @@
                 </div>
             </div>
 
-            <div class="step complied">
+            <div class="step">
                 <div class="step__left">2</div>
                 <div class="step__right">
                     <div>Личные данные</div>
@@ -54,10 +54,12 @@
                         <div class="range">
                             <div class="range__top">
                                 <div class="range__top__left">Сумма займа</div>
-                                <div class="range__top__right">250 000 руб.</div>
+                                <div class="range__top__right" ><span id="outpup">250000</span> руб.</div>
                             </div>
                             <div class="range__wrap">
-                                <input type="range" name="" min="50000" max="1000000" value="10" step="1000">
+                                <div class="slidecontainer">
+                                  <input type="range" min= "50000" max= "1000000" value= "250000" step="1000" class="slider" id="myRange">
+                                </div>
                                 <div class="range__diapason">
                                     <span>50 000 руб.</span>
                                     <span>1 000 000 руб.</span>
@@ -81,13 +83,13 @@
                         <div class="step__left__bot">
                             <div class="step__left__wraper">
                                 <div class="row">
-                                    <div class="col-6">
+                                    <div class="col-sm-6">
                                         <div class="input">
                                             <label>Телефон</label>
                                             <input type="phone" name="" value="+7">
                                         </div>
                                     </div>
-                                    <div class="col-6">
+                                    <div class="col-sm-6">
                                          <div class="input">
                                             <label>Город</label>
                                             <select>
@@ -99,15 +101,53 @@
                                         </div>
                                     </div>
                                 </div>
-                                
-
-                               
+                                <div class="row ">
+                                    <div class="col-sm-6">
+                                        <div class="check">
+                                            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                                            <label for="vehicle1"></label>
+                                            <div>
+                                                Согласие на обработку 
+                                                <a href="">персональных данных</a>
+                                            </div>
+                                        </div>  
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="submit">
+                                            <input type="submit" name="" value="Далее">
+                                            <span>Мы отправим Вам SMS-сообщение с кодом подтверждения</span>    
+                                        </div>                                    
+                                    </div>
+                                </div>                                                
                             </div>
                         </div>
                     </form>
                 </div>
                 <div class="col-lg-4">
-                     <div class="step1__right"></div>
+                     <div class="step1__right">
+                         <div id="accordeon">
+                            <div class="acc-head">
+                               Условия
+                            </div>
+                            <div class="acc-body">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum saepe ex nesciunt, quidem quis illo cupiditate, quod maxime. Tenetur, ex quos. Magnam quasi iure facere minus velit voluptate accusamus hic!
+                            </div>
+                            <div class="acc-head">
+                                Документы для займа
+                            </div>
+                            <div class="acc-body">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum saepe ex nesciunt, quidem quis illo cupiditate, quod maxime. Tenetur, ex quos. Magnam quasi iure facere minus velit voluptate accusamus hic!
+                            </div>
+                            <div class="acc-head">
+                                Порядок получения
+                            </div>
+                            <div class="acc-body" style="display: block;">
+                                <div>1. Заполните заявку на сайте</div>
+                                <div>2. Ждите звонка от менеджера</div>
+                                <div>3. Получите деньги</div>
+                            </div>
+                        </div>
+                     </div>
                 </div>
             </div>
             
