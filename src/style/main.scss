@@ -8,6 +8,16 @@ $grey: #4B4D4E;
 input:focus{
     outline: none;
 }
+input{
+     webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+     font: initial;
+     font-weight: 400;
+    font-size: 17px;
+    line-height: 24px;
+    font-family: 'Montserrat', sans-serif;
+}
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     /* display: none; <- Crashes Chrome on hover */
