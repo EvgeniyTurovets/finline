@@ -875,3 +875,10 @@ input[type="file"] {
     margin-top: 24px;
     cursor: pointer;
 }
+
+
+
+.notactive.y .input{
+    pointer-events: none;
+    opacity: 0.5;
+}

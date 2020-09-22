@@ -57,5 +57,11 @@ $(function(){
 			$('#step3modal').fadeOut()
 		}
 	});
+
+
+	
+	$("#notactive").change( function(){
+	  $(this).closest('.notactive').toggleClass('y')
+	});
 	
 })
