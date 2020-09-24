@@ -47,21 +47,42 @@ $(function(){
 	})
 
 	$('.modal-btn').click(function(){
-		$('#step3modal').fadeOut()
+		$('.modal').fadeOut()
 	})
+	$('.close-modal').click(function(){
+		$('.modal').fadeOut()
+	})
+	
 
 	$('.modal').mouseup(function (e){ // событие клика по веб-документу
 		var div = $(".modal-wrap"); // тут указываем ID элемента
 		if (!div.is(e.target) // если клик был не по нашему блоку
 		    && div.has(e.target).length === 0) { // и не по его дочерним элементам
-			$('#step3modal').fadeOut()
+			$('.modal').fadeOut()
 		}
 	});
 
+	$('.check div a').click(function(){
 
+		$('#pdata').fadeIn()
+		return false
+	})
 	
 	$("#notactive").change( function(){
 	  $(this).closest('.notactive').toggleClass('y')
+	});
+
+	$("#pdatav").change(function(){
+	  if(this.checked==true)
+	    {
+	     $('#pdata').fadeIn()
+		return false
+	    }
+	});
+
+
+	$( "#fortel" ).keypress(function() {
+	  $('#totel').html($(this).val())
 	});
 	
 })
