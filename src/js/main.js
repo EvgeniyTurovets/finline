@@ -72,13 +72,7 @@ $(function(){
 	  $(this).closest('.notactive').toggleClass('y')
 	});
 
-	$("#pdatav").change(function(){
-	  if(this.checked==true)
-	    {
-	     $('#pdata').fadeIn()
-		return false
-	    }
-	});
+	
 
 
 	$( "#fortel" ).keypress(function() {
